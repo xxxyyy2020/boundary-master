@@ -4,6 +4,8 @@ load the pre-trained bert base models bert_based_ch and bert_base_en from  https
 and then put them in current file.
 
 ## train the models
+python train.py \
+--model_encdec bert2crf  --max_seq_length 500  --answer_seq_len 3 --save_name  bert2crf
 
 
 
