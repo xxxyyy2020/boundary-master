@@ -8,15 +8,5 @@ SpanBERT (base & cased): 12-layer, 768-hidden, 12-heads , 110M parameters
 ## Train the models:
 
 python train.py \
-  --model spanbert-base-cased \
-  --train_file train-v1.1.json \
-  --dev_file dev-v1.1.json \
-  --train_batch_size 32 \
-  --eval_batch_size 32  \
-  --learning_rate 2e-5 \
-  --num_train_epochs 4 \
-  --max_seq_length 512 \
-  --doc_stride 128 \
-  --eval_metric f1 \
-  --output_dir squad_output \
-  --fp16
+  --model_encdec bert2crf 
+  --save_name bert2crf
