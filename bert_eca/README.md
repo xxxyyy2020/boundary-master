@@ -8,7 +8,8 @@ python train.py \
 --model_encdec bert2crf  --max_seq_length 500  --answer_seq_len 3 --save_name  bert2crf
 
 
-
+python train.py \
+--model_encdec bert2crf  --max_seq_length 500  --answer_seq_len 3 --save_name  bert2crf
 
 
 
