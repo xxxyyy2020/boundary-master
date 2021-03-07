@@ -7,6 +7,25 @@ SpanBERT (base & cased): 12-layer, 768-hidden, 12-heads , 110M parameters
 
 ## Train the models:
 
-python train.py \
+python train_models.py \
   --model_encdec bert2crf 
   --save_name bert2crf
+  
+
+python train_models.py \
+  --model_encdec multi2point 
+  --save_name multi2point
+  
+
+python bert2soft.py \
+  --model_encdec bert2soft 
+  --save_name bert2soft
+  
+
+
+python bert2gru.py \
+  --model_encdec bert2gru 
+  --save_name bert2gru
+  
+
+
