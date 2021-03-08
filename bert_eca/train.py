@@ -197,10 +197,10 @@ def train(args, train_features, model, tokenizer, use_crf):
                         if os.path.exists(output_dir):
                             shutil.rmtree(output_dir)
                             print('remove file',args.output_dir)
-                            print('\n\n eval results:',results)
-                            test_results = evaluate(args = args, model = model, tokenizer = tokenizer,  prefix="test", use_crf = use_crf)
-                            print('\n\n test results', test_results)
-                            print('\n epoch = :', ep)
+                        print('\n\n eval results:',results)
+                        test_results = evaluate(args = args, model = model, tokenizer = tokenizer,  prefix="test", use_crf = use_crf)
+                        print('\n\n test results', test_results)
+                        print('\n epoch = :', ep)
 
                         best_spanf = span_f
                         os.makedirs(output_dir)
@@ -474,27 +474,10 @@ def main():
             shutil.rmtree(args.output_dir)
             print('remove files: ', args.output_dir)
             
-        #将存储文件基本目录更新到原来样子
+        #
         args.output_dir = out_current_path
         args.data_dir = data_current_path
 
-
-    # print('完成所有划分，数据{}结果如下：\n'.format(args.data_type))
-    # result_v = ''
-    # for index, result in enumerate(list_result):
-    #     strr = ''
-    #     for key, value in result.items():
-    #         strr += key + '\t'
-    #         result_v += str(value) + '\t'
-    #     result_v += '\n'
-    #     print(strr)
-    #     print(result_v)
-    # results_path = os.path.join(args.results_dir, '{}_{}_{}_{}_results.csv'.format(args.model_encdec, args.data_type, args.Gpu_num, args.save_name))
-    # f = open(results_path,'w')
-    # f.write(strr)
-    # f.write('\n')
-    # f.write(result_v)
-    # f.close()
 
 if __name__ == "__main__":
     main()
