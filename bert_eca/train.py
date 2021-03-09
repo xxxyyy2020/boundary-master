@@ -114,9 +114,9 @@ def train(args, train_features, model, tokenizer, use_crf):
                 'lr': args.learning_rate},
 
                 {'params': [p for n, p in linear_param_optimizer if not any(nd in n for nd in no_decay)],
-                'weight_decay': args.weight_decay, 'lr': args.crf_learning_rate},
+                'weight_decay': args.weight_decay, 'lr': args.point_learning_rate},
                 {'params': [p for n, p in linear_param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0,
-                'lr': args.crf_learning_rate}
+                'lr': args.point_learning_rate}
             ]
     
     t_total = len(train_features)//args.batch_size * args.num_train_epochs
