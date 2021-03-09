@@ -59,6 +59,8 @@ def get_argparse():
     # adversarial training
     parser.add_argument("--learning_rate", default=5e-5, type=float,
                         help="The initial learning rate for Adam.")
+    parser.add_argument("--point_learning_rate", default=1e-3, type=float,
+                        help="The initial learning rate for Adam.")
     parser.add_argument("--crf_learning_rate", default=1e-2, type=float,
                         help="The initial learning rate for crf and linear layer.")
     parser.add_argument("--weight_decay", default=0.01, type=float,
