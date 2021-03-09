@@ -8,7 +8,7 @@ and then put them in current file.
 ## Split the data randomly
 
 python  dataset/eca_ch/split_data_fold/split_data.py \
-python  dataset/eca_en/split_data_fold/split_data.py 
+python  dataset/eca_sti/split_data_fold/split_data.py 
 
 ## On Chinese dataset
 python train.py \
