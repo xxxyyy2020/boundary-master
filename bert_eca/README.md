@@ -5,6 +5,11 @@ and then put them in current file.
 
 ##Train the models
 
+## Split the data randomly
+
+python  dataset/eca_ch/split_data_fold/split_data.py \
+python  dataset/eca_en/split_data_fold/split_data.py 
+
 ## On Chinese dataset
 python train.py \
 --model_encdec bert2crf  --max_seq_length 500  --answer_seq_len 3 --save_name  bert2crf_CH --data_type ch
